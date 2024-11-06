@@ -1,8 +1,13 @@
+import useWeather from "../../hooks/useWeather";
 import AddToFav from "./AddToFav";
 import WeatherCondition from "./WeatherCondition";
 import WeatherHeadLine from "./weatherHeadLine";
 
 export default function WeatherBoard() {
+  const { weatherData, error, loading } = useWeather();
+  console.log("weather data: ", weatherData);
+  console.log("error :", error);
+  console.log("loading :", loading);
   return (
     <>
       <div className="container">
